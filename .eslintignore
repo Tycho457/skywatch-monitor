@@ -1,0 +1,9 @@
+node_modules
+docs
+pnpm-lock.yaml
+test
+packages/*/node_modules
+packages/monitor/lib
+packages/report/lib
+packages/server/static
+
