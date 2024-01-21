@@ -37,7 +37,7 @@ class Error {
 
   // js 监控错误
   handleJS() {
-    // js错误
+    // 异步代码错误
     window.addEventListener(
       'error',
       (event: ErrorEvent) => {

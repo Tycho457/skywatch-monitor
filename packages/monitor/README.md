@@ -1,4 +1,13 @@
-### 使用方式
+# SkyWatch-Monitor/montior
+
+## 项目架构
+
+- core
+  - behavior 业务指标
+  - error 错误捕获(稳定性)
+  - performance 用户体验
+
+## 使用方式
 
 ```js
 import Monitor from '@apply-monitor/monitor'
@@ -10,7 +19,7 @@ new Monitor({
 })
 ```
 
-### 配置项
+## 配置项
 
 | Name              | Description                   | tyep    | default      | isRequired |
 | ----------------- | ----------------------------- | ------- | ------------ | ---------- |
