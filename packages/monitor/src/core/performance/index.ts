@@ -43,6 +43,7 @@ class Performance {
     this.report()
   }
 
+  // 上报
   report() {
     ;[onLoaded, onHidden, beforeUnload].forEach((event) => {
       event(() => {

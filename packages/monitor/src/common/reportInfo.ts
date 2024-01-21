@@ -21,6 +21,7 @@ class ReportInfo {
     this.sendWay = options.sendWay || 'img'
   }
 
+  // 添加公共信息
   beforeSend(data: Data): SendData {
     const commonInfo = {
       project: this.options.project,
@@ -32,6 +33,7 @@ class ReportInfo {
     return Object.assign(data, commonInfo)
   }
 
+  // 发送数据,降级处理(sendBeacon>img>ajax)
   send(data: Data, isTmmediate?: boolean): void {
     const sendData = this.beforeSend(data)
     const fn =

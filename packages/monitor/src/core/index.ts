@@ -18,6 +18,7 @@ class Monitor {
     options.isCollectErr && new Error(options)
   }
 
+  // 校验相关
   isSetCondition(options: InitOptions): boolean {
     if (!options.url) {
       console.error('请传入url')
@@ -42,6 +43,7 @@ class Monitor {
     return true
   }
 
+  // 设置默认值
   setDefault(options: InitOptions): void {
     Object.keys(defaultOptions).forEach((key: string) => {
       if (!options[key]) {
