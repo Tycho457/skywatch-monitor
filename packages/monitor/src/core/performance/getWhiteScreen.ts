@@ -1,13 +1,14 @@
 import { SetStore, InitOptions, PerformanceType } from '../../types'
 
-// 获取白屏时间
+// 检测是否出现白屏
+// 此处通过在页面视口的多个采样点进行判断
 
 export function getWhiteScreen(setStore: SetStore, options: InitOptions): void {
   const isSkeletonScreen = options.isSkeletonScreen
   let pooCount = 0
   const startSampLists: string[] = []
   let nowSampLists: string[] = []
-  const containerLists = ['html', 'body', '#app', '#root']
+  const containerLists = ['html', 'body', '#app', '#root'] // 不是渲染的父容器
   let timer = null
 
   if (options.isSkeletonScreen) {
@@ -20,6 +21,7 @@ export function getWhiteScreen(setStore: SetStore, options: InitOptions): void {
     }
   }
 
+  // 根据元素的id、class等信息获取选择器，用于标识该元素
   function getSelector(element: any) {
     if (element.id) {
       return '#' + element.id
@@ -30,6 +32,7 @@ export function getWhiteScreen(setStore: SetStore, options: InitOptions): void {
     }
   }
 
+  // 判断元素是否为容器元素
   function isContainer(element: HTMLElement) {
     const selector = getSelector(element)
     if (isSkeletonScreen) {
@@ -40,8 +43,9 @@ export function getWhiteScreen(setStore: SetStore, options: InitOptions): void {
 
   // 采样对比
   function onSamp() {
-    let points = 0
+    let points = 0 // 记录白点个数
 
+    // 重复采样10次，每次采样10个点
     for (let i = 0; i <= 9; i++) {
       const xElements = document.elementsFromPoint(
         (window.innerWidth * i) / 10,
@@ -58,7 +62,8 @@ export function getWhiteScreen(setStore: SetStore, options: InitOptions): void {
       i != 5 && isContainer(yElements[0] as HTMLElement) && points++
     }
 
-    if (points != 17) {
+    // 如果空白点大于16个，且采样点没有变化，则判断为白屏
+    if (points >= 16) {
       if (isSkeletonScreen) {
         if (!pooCount) return onLoop()
         if (nowSampLists.join() == startSampLists.join())

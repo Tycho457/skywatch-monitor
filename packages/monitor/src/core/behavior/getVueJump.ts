@@ -5,6 +5,8 @@ type Value = {
   name: string
 }
 
+// VJ: Vue Jump 用户在页面跳转的时候
+
 export function getVueJump(report: Report, router) {
   router.beforeEach((to, from, next) => {
     if (!from) {
