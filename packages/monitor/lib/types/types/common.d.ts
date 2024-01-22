@@ -1,0 +1,25 @@
+export interface ObjAnyAttr {
+  [key: string]: any
+}
+export declare enum MonitorType {
+  ERROR = 'error',
+  PERFORMANCE = 'performance',
+  BEHAVIOR = 'behavior',
+}
+export declare enum Level {
+  ERROR = 'error',
+  WARN = 'warn',
+  INFO = 'info',
+}
+export interface BaseReportData {
+  type: MonitorType
+  secondType?: string
+  time: number
+  level?: Level
+}
+export type ReportValue = string | number | ObjAnyAttr
+export interface CommonData {
+  project: string
+  projectSub: string
+  referer: string
+}
