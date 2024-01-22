@@ -1,3 +1,6 @@
+// 数据上报时机
+
+// 页面加载前
 export function onBeforeunload(callback): void {
   window.addEventListener('beforeunload', callback, true)
 }
