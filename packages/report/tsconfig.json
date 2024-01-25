@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "ES2015",
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "DOM"
+    ],
+    "declaration": true,
+    "declarationDir": "types",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src"
+  ]
+}
