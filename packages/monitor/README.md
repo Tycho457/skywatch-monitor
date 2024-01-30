@@ -10,7 +10,7 @@
 ## 使用方式
 
 ```js
-import Monitor from '@apply-monitor/monitor'
+import Monitor from '@solarwatch/monitor'
 
 new Monitor({
   url: '项目上报地址',

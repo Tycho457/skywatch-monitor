@@ -1,4 +1,4 @@
-# solarwatch-monitor
+# SolarWatch-monitor
 
 一款集成 SDK + 服务端 + 可视化平台的性能监控系统
 

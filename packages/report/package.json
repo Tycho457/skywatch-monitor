@@ -1,5 +1,5 @@
 {
-    "name": "@skywatch-monitor/report",
+    "name": "@solarwatch/report",
     "version": "1.0.0",
     "description": "webpack插件:sourcemap上报",
     "main": "lib/index.cjs.js",
@@ -29,6 +29,6 @@
     },
     "keywords": [],
     "author": "tycho457",
-    "license": "ISC"
+    "license": "MIT"
   }
   
