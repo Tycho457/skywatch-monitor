@@ -1,5 +1,5 @@
 {
-    "name": "@skywatch-monitor/monitor",
+    "name": "@solarwatch/monitor",
     "version": "1.0.0",
     "description": "",
     "main": "lib/index.cjs.js",
@@ -28,7 +28,7 @@
     "keywords": [
       "monitor"
     ],
-    "author": "tycho",
-    "license": "ISC"
+    "author": "tycho457",
+    "license": "MIT"
   }
   

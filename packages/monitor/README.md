@@ -1,4 +1,4 @@
-# SkyWatch-Monitor/montior
+# solarwatch/montior
 
 ## 项目架构
 

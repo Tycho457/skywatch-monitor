@@ -1,4 +1,4 @@
-## skywatch-monitor/report
+## solarwatch/report
 
 ### 使用方式
 
